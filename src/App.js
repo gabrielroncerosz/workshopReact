@@ -25,7 +25,7 @@ import './App.css';
             <img src={logo} className="App-logo" alt="logo" />
             
             <button onClick={sumar} >
-            +
+            sumar
             </button>
 
             <div>{variable}</div>
