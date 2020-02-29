@@ -1,34 +1,48 @@
-import React, { useState } from 'react';
-import MyComponent from './MyComponet'
+//const React=requiere('react')
+import React , {useState} from 'react';
+import {render} from 'react-dom'
 import logo from './logo.svg';
 import './App.css';
+//const App = () =>{
+//    const [variable,setVariable] = useState('gabriel')
+//    return(
+//    <div>{variable , variable2}</div>
+//    
+//    )
+//}
+//export default App
+    const App = () =>{
+    const [variable,setVariable] = useState(0)
+    const sumar =() => {
+        setVariable(variable+1)
+    }
+    const restar=() =>{
+        setVariable(variable-1)
+    }
+   return(
+       <div className="App">
+        <div className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            
+            <button onClick={sumar} >
+            +
+            </button>
 
-function App() {
-  const [ count, setCount ] = useState(0)
+            <div>{variable}</div>
 
-  const addMount = () => {
-    setCount(count+1)
-  } 
+            <button onClick={restar} >
+            -
+            </button>
+            <div>
 
-  const removeMount = () => {
-    setCount(count-1)
-  } 
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <MyComponent name="Johan"/>
-        <button onClick={addMount}>
-          +
-        </button>
-        <button onClick={removeMount}>
-          -
-        </button>
-        <h1>{count}</h1>
-      </header>
-    </div>
-  );
+        </div>
+            
+        </div>
+       </div>
+   )
+   
 }
 
-export default App;
+
+  export default App;
+
